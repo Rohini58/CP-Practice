@@ -9,7 +9,7 @@ def handtodice(hand):
 	# your code goes here
     firstdigit= hand // 100
     seconddigit=(hand%100) // 10
-    thirddigit=(hand%10) % 10
+    thirddigit=(hand%10) 
     return firstdigit,seconddigit,thirddigit
 
 #  1.231// 100 = 2
