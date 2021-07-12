@@ -16,6 +16,10 @@ def dicetoorderedhand(a, b, c):
     smallest=min(a,b,c)
     middle= (a + b + c)- largest-smallest
     return largest*100+middle*10+smallest
+
+# def dicetoorderedhand(a, b, c):
+#     s=sorted((a,b,c),reverse=True)
+#     return 100*s[0]+10*s[1]+s[2]
  
  
     
