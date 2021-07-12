@@ -24,6 +24,11 @@ def handtodice(hand):
 #      31
 #     we have to divide only once
      
+	
+# def handTodice(hand):
+# 	x=str(hand)
+# 	return tuple(int(i) for i in x)
+	
      
  
  
