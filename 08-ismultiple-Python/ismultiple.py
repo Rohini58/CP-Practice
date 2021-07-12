@@ -11,7 +11,7 @@ def fun_ismultiple(m, n):
     elif (m == 0 and n == 0):
         return True
     elif (m == 0):
-        return (m%n==0)
+        return True
     elif(n == 0):
         return False
     else:
