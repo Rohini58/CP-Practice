@@ -7,4 +7,25 @@
 
 def handtodice(hand):
 	# your code goes here
-	pass
+    firstdigit= hand // 100
+    seconddigit=(hand%100) // 10
+    thirddigit=(hand%10) % 10
+    return firstdigit,seconddigit,thirddigit
+
+#  1.231// 100 = 2
+#  2.100)231(2
+#      200
+#      ----
+#      31
+#      31//10=3
+# 3.10)231(23
+#      20
+#      ----
+#      31
+#     we have to divide only once
+     
+     
+ 
+ 
+
+
