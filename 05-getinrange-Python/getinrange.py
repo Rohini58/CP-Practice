@@ -5,20 +5,22 @@
 # or if x is greater than the upper bound, return the upper bound.
 
 def fun_getinrange(x, bound1, bound2):
-    # if bound1>bound2 or  bound2<bound1 :
-    #     return bound1 , bound2
-    
-    if bound1>bound2:
-        (bound1,bound2)=(bound2,bound1)   
-    if bound1<x<bound2:
-        return x
-    if x<bound1:
-        return bound1
-    if x>bound2:
-        return bound2
-        
-        
-    
+	# if bound1>bound2 or  bound2<bound1 :
+	#     return bound1 , bound2
+	
+	if bound2<bound1:
+		(bound2,bound1)=(bound1,bound2)  
+	# if bound2>bound1:
+	# 	(bound1,bound2)=(bound2,bound1)
+	if bound1<x<bound2:
+		return x
+	if x<bound1:
+		return bound1
+	if x>bound2:
+		return bound2
+		
+		
+	
 	# your code goes here
  
 	
