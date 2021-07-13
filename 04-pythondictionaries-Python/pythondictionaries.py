@@ -40,7 +40,8 @@ def alphaAsia():
     '''Return all the cities in Asia continent in alphabetical order'''
     cities = list()
     for i in locations['Asia']:
-        cities.extend([ j+' - '+i for j in locations['Asia'][i]])
+        for j in location['Asia'][i]:
+        cities.extend([ j+' - '+i])
     return sorted(cities)
     
 
