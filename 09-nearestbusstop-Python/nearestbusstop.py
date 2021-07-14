@@ -8,4 +8,8 @@
 
 
 def fun_nearestbusstop(street):
+    math.ceil(street())
+    if stree:
+        return 
+        
 	return -1
