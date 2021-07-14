@@ -22,5 +22,15 @@ def fun_getinrange(x, bound1, bound2):
 		
 	
 	# your code goes here
+#  def fun_getinrange(x, bound1, bound2):
+#     s=min(bound1,bound2)
+# 	d=max(bound1,bound2)
+
+# 	if x<s:
+# 		return s
+# 	if x>d:
+# 		return d
+# 	else:
+#      	return x
  
 	
