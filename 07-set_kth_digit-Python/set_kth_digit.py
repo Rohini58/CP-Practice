@@ -7,5 +7,20 @@
 
 
 def fun_set_kth_digit(n, k, d):
-		return 0
+    l=1
+    if(n<0):l=-1
+    n=str(n)
+    n=n[::-1]
+    m=n[:k]+str(d)+n[k+1:]
+    m=m[::-1]
+    return int(m)*l
+
+# 468, 0, 1
+# n=468
+# k=0
+# d=1
+# n="468"
+# n=864
+# m=:0+1+64           K+1:  =   1:   =  64
+# m=461
 
