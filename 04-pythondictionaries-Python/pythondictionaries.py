@@ -61,3 +61,5 @@ locations['Asia'] = {'India' : ['Bangalore']}
 locations['North America']['USA'].append('Atlanta')
 locations['Atlanta'] = {'Atlanta' : ['Cairo']}
 locations['Asia']['China'] = ['Shanghai']
+
+# locations = {'North America': {'USA': ['Mountain View','Atlanta']},'Asia':{'India':['Bangalore'],'China':['Shanghai']},'Africa':{'Egypt':['Cairo']}  }
