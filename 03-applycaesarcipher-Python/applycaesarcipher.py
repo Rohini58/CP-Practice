@@ -9,18 +9,18 @@
 # assert(applyCaesarCipher("We Attack At Dawn", 1) == "Xf Buubdl Bu Ebxo")
 # assert(applyCaesarCipher("zodiac", -2) == "xmbgya")
 
-
 def fun_applycaesarcipher(msg, shift):
     cipher = ''
     for char in msg:
         if char == ' ':
-            cipher = cipher + char
-        if  char.isupper():
-            cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
+              cipher = cipher + char
+        elif  char.isupper():
+              cipher = cipher + chr((ord(char) + shift - 65) % 26 + 65)
         else:
-            cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
+              cipher = cipher + chr((ord(char) + shift - 97) % 26 + 97)
   
-    return cipher 
+    return cipher
+
 
 
 
