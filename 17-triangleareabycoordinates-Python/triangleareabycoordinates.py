@@ -14,4 +14,7 @@ def triangleareabycoordinates(x1, y1, x2, y2, x3, y3):
     area = sqrt(p * (p - l1) * (p - l2) * (p - l3))
     return area
 
-    pass
+#     pass
+# def triangleareabycoordinates(x1, y1, x2, y2, x3, y3):
+#     	# return abs(0.5*(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))
+# 	return abs(1/2*(x1*(y2-y3)+x2*(y3-y1)+x3*(y1-y2)))
