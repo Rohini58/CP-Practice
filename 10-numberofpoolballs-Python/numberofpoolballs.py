@@ -8,5 +8,11 @@
 # number of rows. For this problem and the next, you should research Triangular Numbers.
 
 def numberofpoolballs(rows):
-	# Your code goes here
-	pass
+    result=0
+    for i in range(rows):
+        result=result+i
+        return result 
+            
+    
+    # Your code goes here
+    pass
