@@ -5,8 +5,8 @@
 import math
 def isperfectsquare(n):
     
-    root = math.sqrt(n)
-    if  n>0  and int(root + 0.5) ** 2 == n:
+    
+    if (isinstance(n,int)) and  (n>=0)  and (n==((math.sqrt(n)) * (math.sqrt(n)))):
         return True
        
     else:
