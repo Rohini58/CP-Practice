@@ -8,11 +8,16 @@
 # number of rows. For this problem and the next, you should research Triangular Numbers.
 
 def numberofpoolballs(rows):
-    result=0
+    
+    l=list()
     for i in range(rows):
-        result=result+i
-        return result 
+        if i<=rows:
+            l.append(i)
+            s=sum(l)
+    return s
             
+            
+        
     
     # Your code goes here
     pass
