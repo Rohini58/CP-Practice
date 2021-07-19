@@ -35,3 +35,11 @@ col=2
 print(removeRowAndCol(L,row,col))
 
 # Write your own test cases.
+
+# def removeRowAndCol(L, row, col):
+#     result, minusCol = [], []
+#     minusRow = L[0:row] + L[row+1:]  # removes row
+#     for i in minusRow:
+#         minusCol = i[0:col] + i[col+1:]  # removes column
+#         result.append(minusCol)
+#     return result
