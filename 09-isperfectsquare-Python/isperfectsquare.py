@@ -7,10 +7,19 @@
 
 import math
 def isperfectsquare(n):
-  #print(type(n))
-  if (type(n) != int or float):
+  #n=int(n)
+  if isinstance(n, int) and n>=0:
+    return n == (math.sqrt(n)**2)
+  elif isinstance(n, int) and  n<=0:
     return False
-  return (n == (math.sqrt(n)**2))
+  elif isinstance(n, float):
+    return False
+  elif n.isdigit():
+    n=int(n)
+    return n == (math.sqrt(n)**2)
+  else:
+    return False
+
 
 
 
