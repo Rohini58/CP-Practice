@@ -21,3 +21,21 @@ def mostfrequentdigit(n):
             digit=i
         
     return digit
+
+# def mostfrequentdigit(n):
+#     	# your code goes here
+# 	res = list(map(int, str(n)))
+# 	print (res)
+# 	counter = 0
+# 	num = res[0]
+# 	for i in res:
+# 		curr_frequency = res.count(i)
+# 		if(curr_frequency > counter):
+# 			counter = curr_frequency
+# 			num = i
+# 		elif curr_frequency == counter and (i < num):
+# 			num = i
+# 	return num
+ 
+# print(mostfrequentdigit(5231123123123))
+
