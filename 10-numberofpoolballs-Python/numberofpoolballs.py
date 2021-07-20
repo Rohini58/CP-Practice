@@ -18,4 +18,8 @@ def numberofpoolballs(balls):
         
     
     # Your code goes here
+#     def numberofpoolballs(rows):
+#     n=rows*(rows+1)//2
+#     return n
+
     pass
