@@ -10,19 +10,22 @@
 
 # Function to find the closest perfect square
 # taking minimum steps to reach from a number
+# def largestperfectsquare(n):
+import math
 def largestperfectsquare(n):
+	return int(math.sqrt(n))*int(math.sqrt(n))
 
     	
-    while n > 0:
-        i = 1
-        while i <= n//2:
-            square = i*i
-            if square == n:
-                return square
-            else:
-                i += 1
-        n -= 1
-    return 1
+    # while n > 0:
+    #     i = 1
+    #     while i <= n//2:
+    #         square = i*i
+    #         if square == n:
+    #             return square
+    #         else:
+    #             i += 1
+    #     n -= 1
+    # return 1
 
 
 
