@@ -13,7 +13,7 @@ def multiplyPolynomials(p1, p2):
     result_len=len_a+len_b-1
     
     for i in range(result_len):
-        reesult.append(0)
+        result.append(0)
         
     for i in range(len_a):
         for j in range(len_b):
@@ -25,3 +25,4 @@ def multiplyPolynomials(p1, p2):
 # Write your own test cases
 p1=[2,0,3]
 p2=[4,5]
+print(multiplyPolynomials(p1,p2))
