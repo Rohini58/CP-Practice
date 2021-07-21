@@ -16,7 +16,38 @@
 # assert(ishappynumber(98) == False)
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
+def numSquareSum(n):
+    squareSum = 0;
+    while(n>0):
+        squareSum += (n % 10) * (n % 10);
+        n = int(n / 10);
+    return squareSum;
 
+# method return true if
+# n is Happy number
 def ishappynumber(n):
-	# your code goes here
-	pass
+    # initialize slow
+    # and fast by n
+    slow = n;
+    fast = n;
+    while(True):
+
+        # move slow number
+        # by one iteration
+        slow = numSquareSum(slow);
+        # move fast number
+        # by two iteration
+        fast = numSquareSum(numSquareSum(fast));
+        if(slow != fast):
+            continue;
+        else:
+            break;
+
+    # if both number meet at 1,
+    # then return true
+    if (slow == 1):
+        return True
+    else:
+        return False
+
+ 
