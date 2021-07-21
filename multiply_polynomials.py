@@ -7,8 +7,21 @@
 # And so this returns [8, 10, 12, 15].
 
 def multiplyPolynomials(p1, p2):
+    len_a=len(p1)
+    len_b=len(p2)
+    result=[]
+    result_len=len_a+len_b-1
+    
+    for i in range(result_len):
+        reesult.append(0)
+        
+    for i in range(len_a):
+        for j in range(len_b):
+            result[i+j]+=p1[i]*p2[j]
+    return result
     # Your code goes here...
     pass
 
 # Write your own test cases
-print ("All test cases passwed...")
+p1=[2,0,3]
+p2=[4,5]
