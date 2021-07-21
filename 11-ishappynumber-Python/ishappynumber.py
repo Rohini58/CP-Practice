@@ -21,7 +21,7 @@ def numSquareSum(n):
     while(n>0):
         squareSum += (n % 10) * (n % 10);
         n = int(n / 10);
-    return squareSum;
+    return squareSum
 
 # method return true if
 # n is Happy number
