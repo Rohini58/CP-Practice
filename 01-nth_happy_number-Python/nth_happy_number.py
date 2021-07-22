@@ -14,44 +14,23 @@
 # assert(nth_happy_number(7) == 28)
 # assert(nth_happy_number(8) == 31)
 
-def numSquareSum(n):
-    squareSum = 0;
-    while(n>0):
-        squareSum += (n % 10) * (n % 10);
-        n = int(n / 10);
-    return squareSum
 
-# method return true if
-# n is Happy number
-def ishappynumber(n):
-    # initialize slow
-    # and fast by n
-    slow = n;
-    fast = n;
-    while(True):
-
-        # move slow number
-        # by one iteration
-        slow = numSquareSum(slow);
-        # move fast number
-        # by two iteration
-        fast = numSquareSum(numSquareSum(fast));
-        if(slow != fast):
-            continue;
-        else:
-            break;
-
-    # if both number meet at 1,
-    # then return true
-    if (slow == 1):
+def Happynum(n):
+    sum = 0
+    while(n!=0):
+        sum += (n%10)**2
+        n//=10
+    if sum == 1:
         return True
-    else:
+    elif sum<10:
         return False
+    else:
+        return Happynum(sum)
 def nth_happy_number(n):
-    f = 0
+    f = 1
     g = 0
     while(f<=abs(n)):
         g+=1
-        if(ishappynumber(g)):
+        if(Happynum(g)):
             f+=1
     return g
