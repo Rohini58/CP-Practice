@@ -11,26 +11,23 @@ Return the index of value, or -1 if the value
 doesn't exist in the list."""
 
 def binary_search(input_array, value): 
-    # Your code goes here 
-    begin_index = 0
-    end_index = len(input_array) - 1
-   
-    while begin_index <= end_index:
-        midpoint = begin_index + (end_index - begin_index) // 2
-        midpoint_value = input_array[midpoint]
-        if midpoint_value == value:
-            return midpoint
+    # Your code goes here
 
-        elif value < midpoint_value:
-            end_index = midpoint - 1
+    input_array.sort()
+    low= 0
+    high = len(input_array) - 1
+   
+    while low<= high:
+        mid = (low+high ) // 2
+       
+        if input_array[mid]== value:
+            return mid
+
+        elif value < input_array[mid]:
+            high = mid - 1
 
         else:
-            begin_index = midpoint + 1
+            low= mid + 1
 
     return -1
 
-# input_array = [2,4,5,6,7,8,9,10,12,13,14]
-# value_a = 14
-
-
-# print (binary_search(input_array, value))
