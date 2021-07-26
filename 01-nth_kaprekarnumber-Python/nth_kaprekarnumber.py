@@ -7,7 +7,21 @@
 # and returns the nth Kaprekar number, where as usual we start counting at n==0.
 
 
-import math
-
+def kaprekar(n):
+    s=str(n*n)
+    for i in range(1,len(s)):
+        t=int(s[:i]) + int(s[i:])
+        if t==n:
+            return True
+            exit()
+    return False
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    f = 1
+    g = 0
+    while(f<=abs(n)):
+        g+=1
+        if(kaprekar(g)):
+            f+=1
+    return g
+print(fun_nth_kaprekarnumber(5))
+    
