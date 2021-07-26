@@ -9,14 +9,14 @@
 
 def kaprekar(n):
     s=str(n*n)
-    for i in range(1,len(s)):
+    for i in range(1,len(s)):s
         t=int(s[:i]) + int(s[i:])
         if t==n:
             return True
             exit()
     return False
 def fun_nth_kaprekarnumber(n):
-    f = 1
+    f = 0
     g = 0
     while(f<=abs(n)):
         g+=1
