@@ -3,6 +3,18 @@
 # whether the queen can attack the opponent or not. Note that the queen can attack in the same row, same column and 
 # diagonally.
 
+
 def canqueenattack(qR, qC, oR, oC):
-	# Your code goes here
-	pass
+    if(qR==oR):
+        return True
+    if(oC==qC):
+        return True
+    if abs(qR-oR)==abs(qC-oC):
+        return True
+    
+    return False
+
+
+
+    
+    
