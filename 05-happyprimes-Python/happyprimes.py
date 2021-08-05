@@ -10,35 +10,74 @@
 # # However, they also are here specifically because they are just the right helper 
 # # functions to make nthHappyNumber(n) easier to write!
 
-def ishappynumber(n):
-    	# your code goes here
-	if n<1:
-		return False
-	sum = 0
-	while(n>0):
-		sum+= (n % 10) * (n % 10)
-		n = n//10
-	if sum == 1:
-		return True 
-	elif sum == 4:
-		return False
-	else:
-		return ishappynumber(sum)
-
-def isprime(x):
-    count=0
-    if x>1:
-        for i in range(1,x+1):
-            if(x%i)==0:
-                count = count+1
-        if count == 2:
-            return True
-        else:
-            return False
-
-def ishappyprimenumber(n):
-    # Your code goes here
-    if(ishappynumber(n) and isprime(n)):
+def ishappyprimenumber(m):
+    if(ishappynumber(m) and isprime(m)):
         return True
-    else:
+    return False
+ 
+def ishappynumber(n):
+    if(n==1):
+        return True
+    while (n>=10):
+        n=squarenum(n)
+        if(n==1):
+            return True
+    return False
+ 
+def squarenum(m):
+    sum=0
+    while(m>0):
+        rem=m%10
+        sum+=(rem*rem)
+        m//=10
+    return sum
+ 
+def isprime(y):
+    if (y <= 1):
         return False
+    if (y == 2):
+        return True
+    if (y%2==0):
+        return False
+    maxfactor=round(y**0.5)
+    for factor in range(3,maxfactor+1,2):
+        if (y%factor==0):
+            return False
+    return True
+
+
+
+
+
+# def ishappynumber(n):
+#     	# your code goes here
+# 	if n<1:
+# 		return False
+# 	sum = 0
+# 	while(n>0):
+# 		sum+= (n % 10) * (n % 10)
+# 		n = n//10
+# 	if sum == 1:
+# 		return True 
+# 	elif sum == 4:
+# 		return False
+# 	else:
+# 		return ishappynumber(sum)
+
+# def isprime(x):
+#     count=0
+#     if x>1:
+#         for i in range(1,x+1):
+#             if(x%i)==0:
+#                 count = count+1
+#         if count == 2:
+#             return True
+#         else:
+#             return False
+
+# def ishappyprimenumber(n):
+#     # Your code goes here
+#     if(ishappynumber(n) and isprime(n)):
+#         return True
+#     else:
+#         return False
