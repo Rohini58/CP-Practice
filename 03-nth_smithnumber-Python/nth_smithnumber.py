@@ -7,67 +7,69 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
-def isprime(x):
-    count=0
-    if x>1:
-        for i in range(1,x+1):
-            if(x%i)==0:
-                count = count+1
-        if count == 2:
-            return True
-        else:
-            return False
-  
-def sum_of_digits(x):
-    if x <= 10:
-        return x
-    
-    sum = 0
-    
-    while(x != 0):
-        sum += x % 10
-        x = x // 10
-    return sum
-
-def factorsofnumber(x):
-    if x <= 1:
-        return False
-    
-    primefactors = list()
-    sumfactors = 0
-    d = 2
-    
-    while(d <= x):
-        if isprime(d) and x % d != 0:
-            primefactors.append(d)
-            x = x // d
-        else:
-            d += 1
-
-    for i in primefactors:
-        sumfactors += sum_of_digits(i)
-
-    return (sumfactors )
-
-
-def solve (n):
-    
-    if factorsofnumber(n) == sum_of_digits(n):
-        return  1
-    else:
-        return 0
-
-  
-
-def fun_nth_smithnumber(x):
-    found=1
-    guess=1
-    while(found<=x):
-        guess+=1
-        if(solve(guess)):
-            found+=1
-    return guess
-
-   
-
-   
+import math
+def fun_nth_smithnumber(n):
+   count=0
+   x=1
+   y = 0
+   while(n+1!=count):
+       if(isSmith(x)):
+           count+=1
+           y = x
+       x+=1
+   return y
+ 
+def isPrime(n):
+   if (n < 2):
+       return False
+   if (n == 2):
+       return True
+   if (n % 2 == 0):
+       return False
+   maxFactor = round(n**0.5)
+   for factor in range(3,maxFactor+1,2):
+       if (n % factor == 0):
+           return False
+   return True
+ 
+def isSmith(n):
+   if(isPrime(n)!=True):
+       k = n
+       factors = []
+       sumoffactors=0
+       sumofnumbers=0
+       rem=0
+       srem = 0
+       stotal = 0
+       x =0
+       z =0
+       ve = 0
+       ro = 0
+       if n==1:
+           return False
+       for i in range(2,(n//2) + 1):
+           if(isPrime(i)==True) and (n%i==0):
+               factors.append(i)
+          
+       for an in str(n):
+           ro+=int(an)
+      
+       li=[]
+       for i in factors:
+           while (k%i==0 and k!=0):
+               li.append(i)   
+               sumoffactors+=i
+               k=k//i
+      
+       e = 0       
+       for j in li:
+           if(j>9):
+               for d in str(j):
+                   e+=int(d)
+           else:
+               e+=j
+      
+       if(ro==e):
+           return True
+       else:
+           return False
