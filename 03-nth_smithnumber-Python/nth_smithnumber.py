@@ -7,6 +7,17 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
+def isprime(x):
+    count=0
+    if x>1:
+        for i in range(1,x+1):
+            if(x%i)==0:
+                count = count+1
+        if count == 2:
+            return True
+        else:
+            return False
+  
 def sum_of_digits(x):
     if x <= 10:
         return x
@@ -27,7 +38,7 @@ def factorsofnumber(x):
     d = 2
     
     while(d <= x):
-        if x % d == 0:
+        if isprime(d) and x % d != 0:
             primefactors.append(d)
             x = x // d
         else:
@@ -49,8 +60,8 @@ def solve (n):
   
 
 def fun_nth_smithnumber(x):
-    found=0
-    guess=0
+    found=1
+    guess=1
     while(found<=x):
         guess+=1
         if(solve(guess)):
