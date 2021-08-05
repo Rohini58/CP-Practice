@@ -17,5 +17,5 @@ def fun_carrylessadd(x, y):
         y=y//10
         p=p*10
     return sol
-	
+print(fun_carrylessadd(12345,5))
 
