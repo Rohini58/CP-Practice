@@ -18,13 +18,14 @@ def property309(n):
 
 def nthwithproperty309(n):
     # Your code goes here
-    found=0
-    guess=0
-    while(found<=n):
-        if(property309(guess)):
-            if(found==n):
-                return guess
-            found+=1
-        guess+=1
-    return guess
+    if(n == 0):
+        return 309
+    x = 0
+    y = 308
+    while(x<=n):
+        y+=1
+        if(property309(y)):
+            x+=1
+    return y
+
     # Your code goes here
