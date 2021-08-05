@@ -15,11 +15,26 @@
 
 
 def recursion_secondlargest(L):
-    # your code goes here
-    if len(L)==0 or len(L)==1:
+    if len(L) <= 1:
         return None
     else:
-        z=max(L)
-        L.remove(z)
-        return max(L)
-# 
+        return secondlargest(2,L)
+ 
+def secondlargest(n,L=[]):
+    m=max(L)
+    if L.count(m) >= 2:
+        return m
+    if n == 1:
+        return m
+    else:
+        return secondlargest(n-1, [x for x in L if x!=m])
+
+# def recursion_secondlargest(L):
+#     # your code goes here
+#     if len(L)==0 or len(L)==1:
+#         return None
+#     else:
+#         z=max(L)
+#         L.remove(z)
+#         return max(L)
+# # 
