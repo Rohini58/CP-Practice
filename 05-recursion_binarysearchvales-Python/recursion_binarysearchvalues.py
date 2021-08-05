@@ -18,21 +18,41 @@
 # Hint: Do not slice the list L, but rather adjust the indexes into L. 
 
 
+def binary_search2(arr,low,high,x,res):
+	# res = []
+	if high >= low:
+
+		mid = (high + low) // 2
+		print('midval',mid,'lowval',low,'highval',high)
+		if arr[mid] == x:
+			temp = (mid, arr[mid])
+			print(temp)
+			res.append(temp)
+			return res
+			# return mid
+
+		elif arr[mid] > x:
+			temp = (mid, arr[mid])
+			print(temp)
+			res.append(temp)
+			return binary_search2(arr, low, mid - 1, x, res) 
+		else:
+			temp = (mid, arr[mid])
+			print(temp)
+			res.append(temp)
+			return binary_search2(arr, mid + 1, high, x, res) 
+	else:
+		return res
+
+
 def recursion_binarysearchvalues(L, v):
-    return binarysearch(L,v,0,len(L)-1)
-    
-def binarysearch(L,v,lo,hi,l1=[]):
-    mid=(lo+hi)//2
-    if (lo<hi) and L[mid]==v:
-        l1.append((mid,L[mid]))
-        return l1
-    elif lo==hi:
-        l1.append((mid,L[mid]))
-        return l1
-    elif v<L[mid]:
-        l1.append((mid,L[mid]))
-        hi=mid-1
-    else:
-        l1.append((mid,L[mid]))
-        lo=mid+1
-    return binarysearch(L,v,lo,hi,l1)
+	res =[]
+	# Your codes goes here
+	arr = L
+	low = 0
+	high = len(L)-1
+	x = v
+	return binary_search2(arr,low,high,x,res)
+	# pass
+
+
