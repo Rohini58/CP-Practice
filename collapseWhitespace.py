@@ -16,8 +16,9 @@
 
 def cw(s):
     # Your code goes here...
-    return ""
-
+    return " ".join(s.split())
+print(cw("a\nb"))
+print(cw("a\n   \t    b"))
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
 assert(cw("a\n   \t    b  \n\n  \t\t\t c   ") == "a b c ")
