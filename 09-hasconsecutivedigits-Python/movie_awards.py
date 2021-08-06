@@ -24,7 +24,7 @@ def movieAwards(oscarResults):
         else:
             d[i[1]] = 1
     return d
-print(movieAwards({ 
+print(movieAwards({
     ("Best Picture", "The Shape of Water"), 
     ("Best Actor", "Darkest Hour"),
     ("Best Actress", "Three Billboards Outside Ebbing, Missouri"),
